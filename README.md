@@ -5,7 +5,7 @@ Homebrew tap for installing **BORIS_for_Mac** on Apple Silicon macOS.
 ## User Install
 
 ```bash
-brew tap yourname/boris-for-mac
+brew tap suchyun1993/boris-for-mac
 brew install --cask boris-for-mac
 ```
 
@@ -14,7 +14,8 @@ brew install --cask boris-for-mac
 1. Build release app + DMG:
 
 ```bash
-/Users/yun/Codex_projects/BORIS-stable-external/scripts/build_boris_for_mac_dmg.sh 2.0.0
+cd /path/to/BORIS_for_Mac
+./scripts/build_boris_for_mac_dmg.sh 2.0.0
 ```
 
 2. Upload the generated DMG to GitHub Releases tag `v2.0.0` in your app repo.
@@ -31,9 +32,10 @@ shasum -a 256 /Users/yun/Codex_projects/dist/BORIS_for_Mac-2.0.0-arm64.dmg
 
 4. Update [`Casks/boris-for-mac.rb`](/Users/yun/Codex_projects/homebrew-boris-for-mac/Casks/boris-for-mac.rb):
 ```bash
-/Users/yun/Codex_projects/BORIS-stable-external/scripts/update_homebrew_cask.sh 2.0.0 yourname BORIS_for_Mac
+cd /path/to/BORIS_for_Mac
+./scripts/update_homebrew_cask.sh 2.0.0 suchyun1993 BORIS_for_Mac
 # or
-/Users/yun/Codex_projects/BORIS-stable-external/scripts/update_homebrew_cask.sh 2.0.0 yourname/BORIS_for_Mac
+./scripts/update_homebrew_cask.sh 2.0.0 suchyun1993/BORIS_for_Mac
 ```
 
 - `version`
